@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+
+  /* Enhanced theme transitions */
+  * {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    border-color: hsl(var(--border));
+  }
+
+  /* Smooth theme switching */
+  html {
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  body {
+    transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* Hide all Next.js development indicators */
+.__next-dev-overlay-error-icon,
+.__next-dev-overlay-dismiss-button,
+.nextjs-container-build-error-version-status,
+.__next-dev-overlay,
+.nextjs-portal,
+.nextjs-dev-overlay-root,
+[data-nextjs-dev-overlay],
+[data-nextjs-toast],
+.__next-dev-overlay-wrapper,
+.nextjs-dev-overlay,
+.nextjs-container-errors,
+.nextjs-container-runtime-error,
+.nextjs-container-build-error {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Generic development tools selectors */
+.development-overlay,
+.dev-tools-overlay,
+.dev-tools,
+.development-tools,
+div[data-test="dev-overlay"],
+div[class*="dev-overlay"],
+div[class*="development"],
+div[id*="dev-tools"],
+div[id*="development"] {
+  display: none !important;
+}
+
+/* Next.js specific development panels */
+div[style*="position: fixed"][style*="bottom-right"],
+div[style*="position: fixed"][style*="right: 20px"],
+div[style*="position: fixed"][style*="bottom: 20px"],
+div[style*="background: rgb(0, 0, 0)"][style*="position: fixed"],
+div[style*="background: black"][style*="position: fixed"],
+div[style*="z-index: 99999"],
+div[style*="z-index: 9999"],
+div[class*="nextjs"],
+div[id*="nextjs"],
+div[data-nextjs*="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Position-based selectors for overlays */
+div[style*="position: fixed"][style*="z-index"][style*="bottom"],
+div[style*="position: fixed"][style*="z-index"][style*="top"][style*="right"],
+div[style*="position: absolute"][style*="z-index"][style*="bottom"],
+div[style*="position: absolute"][style*="z-index"][style*="top"][style*="right"] {
+  display: none !important;
+}
+
+/* Target development panels by content */
+div[data-nextjs-dev-panel],
+div[data-nextjs-toolbar],
+.__nextjs-dev-panel,
+.__nextjs-toolbar {
+  display: none !important;
+}
+
+/* Hide any React dev tools */
+.__react-devtools,
+.react-devtools,
+[data-react-devtools] {
+  display: none !important;
+}
+
+/* Custom animations for login page */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.gradient-shift {
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
