@@ -854,13 +854,6 @@ The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 ```
 
-## 📞 Support
-
-### Getting Help
-- **📧 Email**: support@certificategenerator.com
-- **💬 Discord**: [Join our community](https://discord.gg/certificate-generator)
-- **📚 Documentation**: [Full documentation](https://docs.certificategenerator.com)
-- **🐛 Issues**: [Report bugs](https://github.com/your-username/student-certificate-generator/issues)
 
 ### Community
 - **🌟 Star the repo** if you find it useful
